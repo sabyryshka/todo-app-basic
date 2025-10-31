@@ -22,10 +22,9 @@ Add tasks, remove them, and keep everything saved in your browser using localSto
 ```bash
 todo-app/
 │
-├─ src/
-│  ├─ index.html
-│  ├─ main.css
-│  └─ main.js
+├─ index.html
+├─ style.css
+├─ main.js
 │
 ├─ README.md
 └─ .gitignore
