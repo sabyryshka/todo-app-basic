@@ -18,6 +18,13 @@ addTodoButton.addEventListener('click', () => {
   }
 })
 
+textField.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    addTodoButton.click()
+  }
+})
+
 const createElement = (tagName, textContent) => {
   const element = document.createElement(tagName)
   element.textContent = textContent
