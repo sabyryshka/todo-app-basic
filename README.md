@@ -15,7 +15,7 @@ Add tasks, remove them, and keep everything saved in your browser using localSto
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- Vanilla JS
 
 ## 📂 Project Structure
 
