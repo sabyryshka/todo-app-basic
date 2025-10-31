@@ -44,10 +44,3 @@ todo-app/
 3. Open **index.html** in your browser
 
 That’s it — no build tools or dependencies needed.
-
-## 🧩 Possible Improvements
-
-- Edit todos
-- Mark tasks as completed
-- Filter by status (All / Active / Done)
-- Dark / light mode switch
