@@ -28,10 +28,10 @@ body {
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
 .todo-container {
@@ -43,7 +43,8 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  padding-bottom: 20px;
+  height: auto;
 }
 
 .todo-header {
