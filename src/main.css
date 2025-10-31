@@ -1,0 +1,170 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  --radius: 12px;
+  --gap: 12px;
+  --pad: 18px;
+  --max-width: 520px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(180deg, #fbfdff, var(--bg));
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.todo-header {
+  padding: var(--pad);
+  border-bottom: 1px solid #eef2f7;
+  flex-shrink: 0;
+}
+
+.todo-header-form {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.todo-header-text-field {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  background: transparent;
+}
+
+.todo-header-text-field:focus {
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.06);
+}
+
+.todo-header-add-todo-button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.08);
+  transition: transform 0.08s ease, opacity 0.12s;
+}
+
+.todo-header-add-todo-button:active {
+  transform: translateY(1px);
+}
+
+.todo-header-add-todo-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.todo-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  min-height: 0;
+}
+
+.todo-body-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-body-list li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), transparent);
+  border: 1px solid #f1f3f6;
+  font-size: 15px;
+  color: #0b1220;
+  word-break: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.todo-body-list button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.12s, transform 0.08s;
+  flex-shrink: 0;
+}
+
+.todo-body-list button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.todo-body-list button:active {
+  transform: translateY(1px);
+}
+
+.todo-body-list:empty::before {
+  content: 'No todos yet — add your first task';
+  display: block;
+  color: var(--muted);
+  padding: 18px;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 28px 12px;
+  }
+  .todo-header {
+    padding: 14px;
+  }
+  .todo-header-text-field {
+    font-size: 14px;
+  }
+  .todo-header-add-todo-button {
+    padding: 9px 12px;
+  }
+}
